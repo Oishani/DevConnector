@@ -139,7 +139,7 @@ export const deleteExperience = (id) => async (dispatch) => {
       payload: res.data,
     });
 
-    dispatch(setAlert('Experience removed', 'success'));
+    dispatch(setAlert('Experience Removed', 'success'));
   } catch (err) {
     dispatch({
       type: PROFILE_ERROR,
@@ -158,7 +158,7 @@ export const deleteEducation = (id) => async (dispatch) => {
       payload: res.data,
     });
 
-    dispatch(setAlert('Education removed', 'success'));
+    dispatch(setAlert('Education Removed', 'success'));
   } catch (err) {
     dispatch({
       type: PROFILE_ERROR,
@@ -167,7 +167,7 @@ export const deleteEducation = (id) => async (dispatch) => {
   }
 };
 
-// Delete account and profile
+// Delete account & profile
 export const deleteAccount = () => async (dispatch) => {
   if (window.confirm('Are you sure? This can NOT be undone!')) {
     try {
@@ -176,7 +176,7 @@ export const deleteAccount = () => async (dispatch) => {
       dispatch({ type: CLEAR_PROFILE });
       dispatch({ type: ACCOUNT_DELETED });
 
-      dispatch(setAlert('Your account has been permanently deleted'));
+      dispatch(setAlert('Your account has been permanantly deleted'));
     } catch (err) {
       dispatch({
         type: PROFILE_ERROR,
